@@ -1,8 +1,17 @@
 # Projeto integrado com o proj: https://github.com/lucasdav/nodejs-integracao-banco-fiap
-# Projeto desenvolvido com nodejs, utilizando framework nest e integrando com mongoDB
+# Projeto desenvolvido com nodejs, utilizando framework nest e integrando com mongoDB, para CI utiliza git actions e deploy em docker
 
 # Comando docker para executar imagem mongoDB
 docker run --name myMongoDB -p 27017:27017 -d mongo:latest
+
+# Comando para executar dockerfile:
+docker build -t pettech:latest --build-arg="MONGO_URI=mongodb+srv://pettechstock:R8RsTl4dRyoXwfGS@patch-stock.yxf3s7r.mongodb.net/pettech" --build-arg="JWT_SECRET=batman" .
+
+# Comando para exetutar docker imagem:
+docker run --name pettech-stock -p 3010:3010 -d -t pettech:latest
+
+# Comando para visualizar imagens em execução no docker
+docker ps
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
