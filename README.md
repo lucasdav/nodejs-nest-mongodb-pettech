@@ -13,6 +13,9 @@ docker run --name pettech-stock -p 3010:3010 -d -t pettech:latest
 # Comando para visualizar imagens em execução no docker
 docker ps
 
+# comando para executar o docker-compose.yml
+docker compose up --build
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
