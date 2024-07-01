@@ -1,5 +1,6 @@
 # Projeto integrado com o proj: https://github.com/lucasdav/nodejs-integracao-banco-fiap
 # Projeto desenvolvido com nodejs, utilizando framework nest e integrando com mongoDB, para CI utiliza git actions e deploy em docker
+# Projeto utiliza documentação com swagger
 
 # Comando docker para executar imagem mongoDB
 docker run --name myMongoDB -p 27017:27017 -d mongo:latest
